@@ -1,0 +1,103 @@
+.typing {
+  display: inline-block;
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30) 0.5s forwards;
+}
+
+.cursor {
+  font-size: 3rem;
+  display: inline-block;
+  opacity: 1;
+  animation: blink 0.75s step-end infinite, disappear 4s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.highlight {
+  color: #ffdd40;
+}
+.hero .highlight {
+  color: #ffdd40;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-warning {
+  background-color: #ffdd40;
+  border: none;
+}
+
+.bg-dark {
+  background-color: #333 !important;
+}
+
+.skill-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front-end-project,
+.data-science-project {
+  display: none;
+}
